@@ -1,32 +1,23 @@
 package in.springBoot;
 
+import in.springBoot.payment.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderFood {
 
-        /**types of Dependency Injection*/
+    private final PaymentService paymentService;
 
-        //method 1 - Field Injection
-        @Autowired
-        private Payment payment;
+    @Autowired
+    OrderFood(@Qualifier("up") PaymentService paymentService){
+        this.paymentService = paymentService;
+    }
 
 
-      //method 2 - using Constructor //MOST RECOMMENDED
-//    @Autowired
-//    public OrderFood(Payment payment){
-//        this.payment = payment;
-//    }
-
-      //method 3 - Using Setter
-//    @Autowired
-//    public void setPayment(Payment payment) {
-//        this.payment = payment;
-//    }
-
-     public void order(){
-            payment.pay();
-            System.out.println("Order Placed");
-     }
+    public void order(){
+        paymentService.pay();
+        System.out.println("Order Placed");
+    }
 }
