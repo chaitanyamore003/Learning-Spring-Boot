@@ -1,6 +1,6 @@
-package in.springBoot;
+package in.springBoot2;
 
-import in.springBoot.payment.PaymentService;
+import in.springBoot2.payment.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,4 @@
-package in.springBoot;
-
-import org.springframework.stereotype.Component;
+package in.springBoot2;
 
 public class User {
     private String name;

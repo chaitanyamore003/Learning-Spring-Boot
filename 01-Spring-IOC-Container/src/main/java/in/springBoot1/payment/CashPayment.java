@@ -1,4 +1,4 @@
-package in.springBoot.payment;
+package in.springBoot2.payment;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
